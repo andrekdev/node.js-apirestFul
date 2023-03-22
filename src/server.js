@@ -10,7 +10,7 @@ const app = express()
 db.connect()
 
 //habilita o servidor a receber dados vias posts(formularios)
-app.use(express.urlencoded({extends: true}))
+app.use(express.json())
 
 
 //definindo as rotas

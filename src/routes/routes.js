@@ -23,7 +23,7 @@ router.delete('/products/:id', ProductController.delete)
 ////:id? parametro opcional
 
 router.get('/products/:id?', ProductController.get)
-
+router.post('/products', ProductController.post)
 router.get('/clientes', (req, res) =>{
 
     res.send({
