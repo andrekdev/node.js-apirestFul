@@ -17,7 +17,12 @@ router.put('/products/:id', ProductController.put)
 router.delete('/products/:id', ProductController.delete)
 */
 
-router.get('/products', ProductController.get)
+///products/:id pega um unico produto
+// /products pega todos os produtos
+
+////:id? parametro opcional
+
+router.get('/products/:id?', ProductController.get)
 
 router.get('/clientes', (req, res) =>{
 
