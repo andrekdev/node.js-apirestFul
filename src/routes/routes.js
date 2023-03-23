@@ -25,6 +25,8 @@ router.delete('/products/:id', ProductController.delete)
 router.get('/products/:id?', ProductController.get)
 router.post('/products', ProductController.post)
 router.put('/products/:id', ProductController.put)
+router.delete('/products/:id', ProductController.del)
+
 router.get('/clientes', (req, res) =>{
 
     res.send({
