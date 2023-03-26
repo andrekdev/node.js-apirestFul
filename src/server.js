@@ -11,20 +11,24 @@ db.connect()
 
 //cors
 const allowedOrigins = [
-    'http://127.0.0.1:5500'
+    'http://127.0.0.1:5500',
+    'http://www.app.com.br'
 ]
+
+
+//habilita CORS
 app.use(cors({
-    origin: function(origin, callback){
-     let allowed = true
+    origin: function (origin, callback){
+        let allowed = true
 
-     //mobile
-     if(!origin) allowed = true
+        //mobile app
+        if(!origin) allowed = true 
 
-     if(!allowedOrigins.includes(origin)) allowed = false
-     callback(null, allowed)
+        if(!allowedOrigins.includes(origin)) allowed = false
+
+        callback(null, allowed)
     }
 }))
-
 
 //habilita o servidor a receber dados vias posts(formularios)
 app.use(express.json())
